@@ -1,0 +1,3 @@
+category,n_units,n_unit_service_combos,avg_offers_per_combo,avg_price_band_std,avg_distinct_values_per_combo,median_price_band_std,median_distinct_values
+Autobidder Battery,4,40,11532.35,0.0,10.0,0.0,10.0
+Non-Autobidder Battery,29,274,7801.036496350365,52.405872952996305,12.613138686131387,0.0,10.0

@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(# Check middle of file sed -n ''20000000,20000020p'' \"\"/Volumes/Rich drive/ai_bidders/data/samples/PUBLIC_ARCHIVE#BIDOFFERPERIOD#FILE01#202510010000.CSV\"\")",
+      "Bash(# Sample dates at different points - use dd for fast random access dd if=\"\"/Volumes/Rich drive/ai_bidders/data/samples/PUBLIC_ARCHIVE#BIDOFFERPERIOD#FILE01#202510010000.CSV\"\" bs=1M skip=3000 count=1)",
+      "Bash(dd:*)",
+      "Bash(# Get cleaner samples - skip to byte position and find first complete line dd if=\"\"/Volumes/Rich drive/ai_bidders/data/samples/PUBLIC_ARCHIVE#BIDOFFERPERIOD#FILE01#202510010000.CSV\"\" bs=1M skip=3000 count=1)",
+      "Bash(# Check near end of file dd if=\"\"/Volumes/Rich drive/ai_bidders/data/samples/PUBLIC_ARCHIVE#BIDOFFERPERIOD#FILE01#202510010000.CSV\"\" bs=1M skip=5900 count=1)",
+      "Bash(# Extract unique trading dates \\(column 6\\) from a sample dd if=\"\"/Volumes/Rich drive/ai_bidders/data/samples/PUBLIC_ARCHIVE#BIDOFFERPERIOD#FILE01#202510010000.CSV\"\" bs=10M skip=100 count=10)",
+      "Bash(# TRADINGDATE is column 7 \\(after D,BIDS,BIDOFFERPERIOD,3,DUID,BIDTYPE\\) dd if=\"\"/Volumes/Rich drive/ai_bidders/data/samples/PUBLIC_ARCHIVE#BIDOFFERPERIOD#FILE01#202510010000.CSV\"\" bs=10M skip=0 count=50)",
+      "Bash(done)",
+      "Bash(sort -u echo \"=== End of file ===\" tail -20 \"/Volumes/Rich drive/ai_bidders/data/samples/PUBLIC_ARCHIVE#BIDOFFERPERIOD#FILE01#202510010000.CSV\")",
+      "WebFetch(domain:www.nemweb.com.au)",
+      "Bash(__NEW_LINE_e901df7cfec0d9c8__ echo \"\")",
+      "Bash(python:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(# Sample from different parts of the file to find all BIDTYPE values for offset in 0 1000000 5000000 10000000 20000000 30000000; do echo \"\"Offset $offset:\"\" tail -c +$offset \"\"/Volumes/Rich drive/ai_bidders/data/samples/PUBLIC_ARCHIVE#BIDOFFERPERIOD#FILE01#202510010000.CSV\"\")",
+      "Bash(# Sample from later in the 6GB file for offset in 100000000 500000000 1000000000 2000000000 3000000000 4000000000 5000000000; do echo \"\"Offset $offset bytes:\"\" tail -c +$offset \"\"/Volumes/Rich drive/ai_bidders/data/samples/PUBLIC_ARCHIVE#BIDOFFERPERIOD#FILE01#202510010000.CSV\"\")",
+      "Bash(# Check near end of file for RAISE services for offset in 5500000000 5800000000 6000000000 6100000000 6200000000; do echo \"\"Offset $offset bytes:\"\" tail -c +$offset \"\"/Volumes/Rich drive/ai_bidders/data/samples/PUBLIC_ARCHIVE#BIDOFFERPERIOD#FILE01#202510010000.CSV\"\")",
+      "Bash(xxd:*)",
+      "Bash(~/.zshrc)",
+      "Bash(export NEM_DATA_PATH=\"/Users/richard/Library/CloudStorage/Box-Box/nem_auto/samples\")"
+    ]
+  }
+}
