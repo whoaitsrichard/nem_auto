@@ -14,7 +14,7 @@ bidday_df = pd.read_csv(biddayofferperiod, nrows=10, skiprows=1)
 
 
 
-
+bidday_df.to_csv("price_band_ex.csv")
 
 
 
